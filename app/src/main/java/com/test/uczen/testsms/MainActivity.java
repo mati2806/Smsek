@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button przejscie;
+    Button przejscie, dzyn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         przejscie = (Button) findViewById(R.id.b1);
+        dzyn = (Button) findViewById(R.id.b2);
 
         przejscie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), scena1.class);
+                startActivity(i);
+
+            }
+
+
+        });
+
+        dzyn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), scena2.class);
                 startActivity(i);
 
             }
